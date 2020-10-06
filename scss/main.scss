@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 //reset
@@ -73,28 +73,54 @@ body {
   background-color: $veryPaleCyan;
   padding-bottom: 6rem;
   margin-bottom: 16rem;
+
+  @include respond(phone) {
+    margin-bottom: 7rem;
+    padding-bottom: 4.5rem;
+  }
 }
 
 .hero-container {
   width: 90%;
   margin: auto;
+
+  @include respond(phone) {
+    width: 90%;
+  }
 }
 
 .header-button {
-  padding: 2rem 9rem;
+  padding: 1rem 6rem;
   border-radius: 50px;
   border: none;
-  font-size: 2.1rem;
+  font-size: 1.7rem;
   background-color: $white;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+
+  @include respond(phone) {
+    padding: 0.5rem 2rem;
+    font-size: 1.4rem;
+  }
 }
 
 .hero-button {
-  padding: 2rem 9rem;
+  padding: 1.5rem 5rem;
   border-radius: 50px;
   border: none;
-  font-size: 2.1rem;
+  font-size: 1.8rem;
   background-color: $pink;
   color: $white;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+
+  @include respond(phone) {
+    font-size: 1.5rem;
+    padding: 1.5rem 7rem;
+    margin-bottom: 5.5rem;
+  }
 }
 
 .header {
@@ -105,6 +131,41 @@ body {
 
   @include respond(phone) {
     height: 6rem;
+    margin-bottom: 9rem;
+  }
+}
+
+.hero-header {
+  width: 92%;
+  font-size: 3.9rem;
+  margin-bottom: 3rem;
+  letter-spacing: 0.2rem;
+  line-height: 1.5;
+  font-family: 'Opens Sans', sans-serif;
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+  }
+}
+
+.hero-text {
+  margin-bottom: 4rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  font-size: 1.6rem;
+
+  @include respond(phone) {
+    margin-bottom: 4.3rem;
+  }
+}
+
+.hero-content {
+  width: 84%;
+
+  @include respond(phone) {
+    width: 100%;
   }
 }
 
@@ -124,6 +185,7 @@ body {
     flex: none;
     width: 85%;
     margin: auto;
+    text-align: center;
   }
 }
 
@@ -131,6 +193,8 @@ body {
   flex: 55%;
   @include respond(phone) {
     flex: none;
+    width: 85%;
+    margin: auto;
   }
 }
 
@@ -145,13 +209,22 @@ body {
 .main {
   width: 80%;
   margin: auto;
+
+  @include respond(phone) {
+    width: 90%;
+  }
 }
 .module {
   display: flex;
-  border-radius: 4px;
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.2);
   margin-bottom: 4rem;
-  padding: 3rem;
+  padding: 5rem 3rem;
+
+  @include respond(phone) {
+    display: block;
+    padding-bottom: 2rem;
+  }
 }
 
 .module-text {
@@ -159,9 +232,43 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @include respond(phone) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.module-content {
+  width: 80%;
+}
+
+.module-headline {
+  margin-bottom: 2rem;
+}
+
+.module-block {
+  font-size: 1.7rem;
+  line-height: 1.8;
+  font-family: 'Poppins', sans-serif;
+
+  @include respond(phone) {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    text-align: center;
+  }
 }
 .module-image {
-  padding: 3rem;
+  width: 80%;
+  // padding: 3.9rem;
+
+  @include respond(phone) {
+    margin-bottom: 2.5rem;
+    width: 100%;
+  }
+}
+
+.switch {
+  flex-direction: row-reverse;
 }
 
 .action {
@@ -170,22 +277,54 @@ body {
   margin: auto;
   padding: 6rem;
   position: relative;
-  bottom: -10rem;
+  bottom: -13rem;
   background-color: $white;
-  border-radius: 6px;
+  border-radius: 10px;
   text-align: center;
+
+  @include respond(phone) {
+    width: 100%;
+    padding: 4.5rem 2rem 2.5rem 2rem;
+    bottom: -9rem;
+  }
+}
+
+.action-button {
+  padding: 2rem 9rem;
+  border-radius: 50px;
+  border: none;
+  font-size: 2.1rem;
+  background-color: $pink;
+  color: $white;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+
+  @include respond(phone) {
+    font-size: 1.5rem;
+    padding: 1.5rem 7rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .action-heading {
   margin-bottom: 3rem;
   font-size: 3.3rem;
+
+  @include respond(phone) {
+    font-size: 2rem;
+  }
 }
 
 .footer {
   background-color: $veryDarkCyan;
-  padding-top: 19rem;
+  padding-top: 23rem;
   padding-bottom: 7rem;
   color: $white;
+
+  @include respond(phone) {
+    padding-top: 17.5rem;
+  }
 }
 
 .icon {
@@ -204,12 +343,18 @@ body {
   width: 24rem;
   @include respond(phone) {
     width: 20rem;
+    margin-bottom: 1rem;
   }
 }
 
 .footer-container {
   width: 85%;
   margin: auto;
+}
+
+.footer-block {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
 }
 
 .footer-content {
@@ -219,6 +364,7 @@ body {
   margin-bottom: 3rem;
   @include respond(phone) {
     display: block;
+    margin-bottom: 1rem;
   }
 }
 
@@ -263,12 +409,11 @@ body {
 }
 
 .footer-item {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   font-size: 1.9rem;
-  font-weight: 600;
 
   @include respond(phone) {
-    margin-bottom: 2rem;
+    margin-bottom: 1.8rem;
   }
 }
 
@@ -288,6 +433,11 @@ ion-icon {
 
 .copy {
   text-align: right;
+
+  @include respond(phone) {
+    text-align: center;
+    font-size: 1.5rem;
+  }
 }
 
 .attribution {

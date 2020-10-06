@@ -334,7 +334,8 @@ ion-icon {
       font-size: 25px; } }
 
 .copy {
-  text-align: right; }
+  text-align: right;
+  font-size: 1.4rem; }
   @media (max-width: 600px) {
     .copy {
       text-align: center;
